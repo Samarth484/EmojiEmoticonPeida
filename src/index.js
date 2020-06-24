@@ -1,11 +1,12 @@
-var numbers = [3, 56, 2, 48, 5];
+import React from "react";
+import ReactDOM from "react-dom";
+import emojipedia from "./emojipedia";
+console.log(emojipedia);
 
-//Map -Create a new array by doing something with each item in an array.
+var meaning = emojipedia.map(function (val) {
+    return val.meaning.substring(0,101);
+});
+console.log(meaning);
 
-//Filter - Create a new array by keeping the items that return true.
 
-//Reduce - Accumulate a value by doing something to each item in an array.
-
-//Find - find the first item that matches from an array.
-
-//FindIndex - find the index of the first item that matches.
+ReactDOM.render(<h1>This is just a use case</h1>, document.getElementById("root"));
